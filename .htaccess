@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Remove index.php from url
+RewriteCond $1 !^(index\.php|media|semantic|node_modules|assets|robots\.txt|sitemap\.xml)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /myprohr.info/index.php?/$1 [L]
